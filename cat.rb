@@ -7,11 +7,18 @@ class Cat
   end
 
   def eats_at
-    "#{@name} eats at #{@meal_time}"
+      if @meal_time < 12
+        clock = "#{@meal_time} AM"
+      elsif @meal_time == 12
+        clock = "#{@meal_time} PM"  # fix for noon specifically
+      else
+        clock = "#{@meal_time - 12} PM"
+    end
+    clock
   end
 
   def meow
-    "I'm #{@name} and I eat #{@preferred_food} at #{@meal_time}"
+    "I'm #{@name} and I eat #{@preferred_food} at #{eats_at}"
   end
 
 end
