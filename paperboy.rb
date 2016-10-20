@@ -17,10 +17,8 @@ class Paperboy
     houses = end_address - start_address
     if houses < quota
       wage = houses * 0.25 - 2
-      puts "in if"
     else
       wage = (houses * 0.25) + ((houses - quota) * 0.25)
-      puts "in else"
     end
     @experience += houses
     @earnings += wage
@@ -36,5 +34,5 @@ end
 
 eric = Paperboy.new("Eric")
 eric.deliver(100, 200)
-eric.deliver(100, 199)
+eric.deliver(100, 200)
 eric.report
