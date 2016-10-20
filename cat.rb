@@ -19,5 +19,5 @@ end
 jim = Cat.new("Jim", "Pizza", 18)
 pam = Cat.new("Pam", "Cookies", 17)
 
-puts jim.eats_at
+puts pam.meow
 puts jim.meow
