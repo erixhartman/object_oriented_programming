@@ -1,11 +1,18 @@
+# class Plateau
+#
+#
+# def plateau (l,w)
+#   puts "Please indicate the length (in units) of the plateau you are on"
+#   l = gets.chomp.to_i
+#   puts "Please indicate the width of the plateu"
+#   w = gets.chomp.to_i
+# end
+#
+#
+# end
+
+
 class Rover
-    #
-    # def plateau (l,w)
-    #   puts "Please indicate the length (in units) of the plateau you are on"
-    #   l = gets.chomp.to_i
-    #   puts "Please indicate the width of the plateu"
-    #   w = gets.chomp.to_i
-    # end
 
   def initialize(x, y, direction)
     @x         = x
@@ -20,7 +27,6 @@ class Rover
       elsif input == "L"
         l_turn
       elsif input == "M"
-        puts "matched command M"
         move
       else
         puts "Error!"
@@ -59,18 +65,13 @@ class Rover
   end
 
   def move
-    puts "Inside method move"
     if @direction    == "N"
-      puts "matched direction N"
       @y += 1
     elsif @direction == "E"
-      puts "matched direction E"
       @x += 1
     elsif @direction == "S"
-      puts "matched direction S"
       @y -= 1
     elsif @direction == "W"
-      puts "matched direction W"
       @x -= 1
     else
       puts "ERROR"
